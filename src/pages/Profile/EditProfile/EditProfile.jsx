@@ -83,7 +83,7 @@ export default function EditProfile({ user, loggedInUser }) {
       dob,
     }
       if(editedInfo){
-        axios.patch(`http://localhost:5000/userUpdates/${user?.email}`,editedInfo)
+        axios.patch(`https://backend-guft.onrender.com/userUpdates/${user?.email}`,editedInfo)
         setOpen(false)
       }
   }
