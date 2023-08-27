@@ -22,7 +22,7 @@ const MainProfile = ({user}) => {
 
   useEffect(() => {
 
-    fetch(`http://localhost:5000/userPost?email=${user?.email}`)
+    fetch(`https://backend-guft.onrender.com/userPost?email=${user?.email}`)
           .then(res => res.json())
           .then(data => {
               setPosts(data);
@@ -48,7 +48,7 @@ const MainProfile = ({user}) => {
 
 
         if(url){
-          axios.patch(`http://localhost:5000/userUpdates/${user?.email}`,userCoverImage)
+          axios.patch(`https://backend-guft.onrender.com/userUpdates/${user?.email}`,userCoverImage)
         }
     })
     }
@@ -70,7 +70,7 @@ const MainProfile = ({user}) => {
         setIsLoading(false);
 
         if(url){
-          axios.patch(`http://localhost:5000/userUpdates/${user?.email}`,userProfileImage)
+          axios.patch(`https://backend-guft.onrender.com/userUpdates/${user?.email}`,userProfileImage)
         }
     })  }
   return (
