@@ -44,7 +44,7 @@ const TweetBox =()=>{
         e.preventDefault();
         
         if (user?.providerData[0]?.providerId === 'password') {
-            fetch(`https://backend-guft.onrender.com/postloggedInUser?email=${email}`)
+            fetch(`https://backend-guft.onrender.com/loggedInUser?email=${email}`)
                 .then(res => res.json())
                 .then(data => {
                     setName(data[0]?.name)
