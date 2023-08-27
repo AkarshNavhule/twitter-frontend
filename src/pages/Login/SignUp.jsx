@@ -49,7 +49,7 @@ const SignUp = () => {
           name: name,
           email: email,
       }
-     const {data} = axios.post(`http://localhost:5000/register`,user)
+     const {data} = axios.post(`https://backend-guft.onrender.com/register`,user)
     }
 
     const handleGoogleSignIn =()=>{
